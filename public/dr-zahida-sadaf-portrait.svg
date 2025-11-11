@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait of Dr. Zahida Sadaf</title>
+  <desc id="desc">Stylized illustration of a smiling Ayurvedic-Unani physician with a calming botanical background.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d1fae5" />
+      <stop offset="100%" stop-color="#fde68a" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="48" fill="url(#bg)" />
+  <circle cx="200" cy="150" r="110" fill="#fef3c7" />
+  <path d="M150 310c30-50 110-50 140 0" fill="#065f46" opacity="0.2" />
+  <path d="M105 330c50-70 140-70 190 0" fill="#047857" opacity="0.2" />
+  <g fill="#064e3b">
+    <path d="M180 175c-12 0-20-8-20-18s9-20 20-20 20 9 20 20-8 18-20 18zm40 0c-12 0-20-8-20-18s9-20 20-20 20 9 20 20-8 18-20 18z" />
+    <path d="M150 220c20 25 80 25 100 0" stroke="#022c22" stroke-width="8" stroke-linecap="round" fill="none" />
+  </g>
+  <path d="M120 160c0-52 38-94 84-94s84 42 84 94c0 24-8 46-21 63-19 26-16 66-63 66-51 0-47-45-69-70-9-10-15-36-15-59z" fill="#0f766e" />
+  <path d="M127 147c9-44 45-77 90-77 43 0 79 31 88 73-20-20-46-32-75-32-38 0-73 20-103 36z" fill="#047857" />
+  <path d="M200 286c-44 0-80 26-92 68 30 22 63 32 92 32s62-10 92-32c-12-42-48-68-92-68z" fill="#bbf7d0" />
+  <g fill="none" stroke="#10b981" stroke-linecap="round" stroke-width="8">
+    <path d="M54 136c20 2 35 18 37 38" />
+    <path d="M65 100c16 4 26 17 28 32" />
+    <path d="M346 140c-20 2-35 18-37 38" />
+    <path d="M335 104c-16 4-26 17-28 32" />
+  </g>
+</svg>
