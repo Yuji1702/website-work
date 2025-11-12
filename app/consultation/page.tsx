@@ -53,8 +53,8 @@ export default function ConsultationPage() {
     <div className="page-shell pb-16">
       <section className="pt-16">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-bold tracking-tight text-emerald-950">Begin your consultation</h1>
-          <p className="mt-6 text-lg text-slate-700">
+          <h1 className="text-4xl font-bold tracking-tight text-text-dark">Begin your consultation</h1>
+          <p className="mt-6 text-lg text-text-dark/80">
             Consultations start at $80 and are valid for 15 days, giving you time to integrate
             your personalized plan. Dr. Zahida Sadaf believes healing is a sacred service, so
             every step is transparent, compassionate, and designed around your lifestyle.
@@ -62,12 +62,12 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <section className="mt-12 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10" aria-labelledby="process">
+      <section className="mt-12 rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-accent-pink-pale sm:p-10" aria-labelledby="process">
         <div className="max-w-3xl">
-          <h2 id="process" className="text-3xl font-semibold text-emerald-950">
+          <h2 id="process" className="text-3xl font-semibold text-text-dark">
             Step-by-step booking process
           </h2>
-          <p className="mt-4 text-slate-700">
+          <p className="mt-4 text-text-dark/80">
             From first message to ongoing mentorship, here’s how we co-create your healing plan.
           </p>
         </div>
@@ -76,29 +76,29 @@ export default function ConsultationPage() {
           {steps.map((step, index) => (
             <li
               key={step.title}
-              className="flex flex-col gap-3 rounded-3xl bg-emerald-50/80 p-6"
+              className="flex flex-col gap-3 rounded-3xl bg-accent-pink-pale/70 p-6"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-900 text-sm font-semibold text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">
                 {index + 1}
               </span>
-              <h3 className="text-lg font-semibold text-emerald-900">{step.title}</h3>
-              <p className="text-sm text-slate-700">{step.description}</p>
+              <h3 className="text-lg font-semibold text-primary">{step.title}</h3>
+              <p className="text-sm text-text-dark/80">{step.description}</p>
             </li>
           ))}
         </ol>
       </section>
 
       <section className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] lg:items-start">
-        <div className="rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10">
-          <h2 className="text-3xl font-semibold text-emerald-950">Consultation investment</h2>
-          <p className="mt-4 text-slate-700">
+        <div className="rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-accent-pink-pale sm:p-10">
+          <h2 className="text-3xl font-semibold text-text-dark">Consultation investment</h2>
+          <p className="mt-4 text-text-dark/80">
             Choose the currency that matches your location. Membership bundles with additional
             follow-ups and herbal refills are available on request.
           </p>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-100">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-accent-pink-pale">
             <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-emerald-100 text-sm">
-              <thead className="bg-emerald-900 text-left text-xs font-semibold uppercase tracking-wide text-emerald-50">
+              <table className="min-w-full divide-y divide-accent-pink-pale text-sm">
+              <thead className="bg-primary text-left text-xs font-semibold uppercase tracking-wide text-white">
                 <tr>
                   <th scope="col" className="px-4 py-3">
                     Region
@@ -108,34 +108,34 @@ export default function ConsultationPage() {
                   </th>
                 </tr>
               </thead>
-                <tbody className="divide-y divide-emerald-100 bg-white/60">
+                <tbody className="divide-y divide-accent-pink-pale bg-white/60">
                   {pricing.map((price) => (
                     <tr key={price.region}>
-                      <td className="px-4 py-3 font-medium text-emerald-900">{price.region}</td>
-                      <td className="px-4 py-3 text-emerald-800">{price.amount}</td>
+                      <td className="px-4 py-3 font-medium text-primary">{price.region}</td>
+                      <td className="px-4 py-3 text-secondary">{price.amount}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
           </div>
-          <div className="mt-6 space-y-3 text-sm text-slate-700">
+          <div className="mt-6 space-y-3 text-sm text-text-dark/80">
             <p>
               After payment, share the receipt on WhatsApp for scheduling. Secure online payment
               integrations are coming soon—meanwhile, bank transfer and UPI details will be
               provided via chat.
             </p>
             <p>
-              <strong className="font-semibold text-emerald-900">WhatsApp support:</strong>{" "}
+              <strong className="font-semibold text-primary">WhatsApp support:</strong>{" "}
               <a className="underline" href="https://wa.me/917667265892" target="_blank" rel="noreferrer">
                 https://wa.me/917667265892
               </a>
             </p>
           </div>
         </div>
-        <div className="rounded-3xl bg-emerald-900/95 p-8 text-emerald-50 shadow-lg sm:p-10">
+        <div className="rounded-3xl bg-primary/95 p-8 text-white shadow-lg sm:p-10">
           <h2 className="text-3xl font-semibold text-white">Share your health story</h2>
-          <p className="mt-3 text-emerald-100">
+          <p className="mt-3 text-white/90">
             Complete the form and we will respond within one business day with next steps.
           </p>
           <form className="mt-6 space-y-5" action="#" method="post">
@@ -206,13 +206,13 @@ export default function ConsultationPage() {
             <div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-emerald-950 shadow transition hover:bg-amber-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="w-full rounded-full bg-accent-pink px-6 py-3 text-sm font-semibold text-text-dark shadow transition hover:bg-accent-pink-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Submit inquiry
               </button>
             </div>
           </form>
-          <p className="mt-6 text-xs text-emerald-200">
+          <p className="mt-6 text-xs text-white/70">
             Consultations are valid for 15 days and include one detailed follow-up. Memberships
             provide extended monitoring, seasonal detox plans, and discounted herbal refills.
           </p>
