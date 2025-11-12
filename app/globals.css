@@ -1,29 +1,69 @@
 @import "tailwindcss";
 
+/* 
+ * Accessible color palette for healthcare site
+ * All colors tested for WCAG AA compliance
+ */
 :root {
-  --background: #f5f7f4;
-  --foreground: #0f1f19;
-  --accent: #0f4f3b;
-  --accent-soft: #e0f2e9;
-  --highlight: #fcd34d;
+  /* Primary - Forest green for trust and healing (white text passes AA) */
+  --primary: #44715A;
+  --primary-hover: #3a5f4d;
+  --primary-light: #799E78;
+  
+  /* Accent pinks - Nurturing feminine energy (dark text passes AA) */
+  --accent-pink: #D37995;
+  --accent-pink-light: #E19DB2;
+  --accent-pink-pale: #FADCE4;
+  
+  /* Neutrals - Clean, professional foundation */
+  --neutral-dark: #0F172A;
+  --neutral-off-white: #F7F5F5;
+  --neutral-white: #FFFFFF;
+  
+  /* Status colors - Accessible feedback */
+  --success: #3E8B63;
+  --error: #C53030;
+  
+  /* Background gradients for warmth */
+  --background: var(--neutral-off-white);
+  --foreground: var(--neutral-dark);
 }
 
 @theme inline {
+  /* Core color tokens with semantic naming */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
+  
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-pink-light: var(--accent-pink-light);
+  --color-accent-pink-pale: var(--accent-pink-pale);
+  
+  --color-neutral-dark: var(--neutral-dark);
+  --color-neutral-off-white: var(--neutral-off-white);
+  --color-neutral-white: var(--neutral-white);
+  
+  --color-success: var(--success);
+  --color-error: var(--error);
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* Typography */
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  
+  /* Minimum font size for mobile readability */
+  --font-size-base: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #06130f;
-    --foreground: #f3f6f2;
-    --accent: #34d399;
-    --accent-soft: #123027;
-    --highlight: #facc15;
+    /* Maintain light theme for healthcare trust and clarity */
+    --background: var(--neutral-off-white);
+    --foreground: var(--neutral-dark);
   }
 }
 
@@ -37,16 +77,23 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-size: var(--font-size-base);
   line-height: 1.6;
 }
 
 a {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #0d3c2c;
+  color: var(--primary-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 img,
@@ -57,13 +104,13 @@ video {
 }
 
 ::selection {
-  background: var(--highlight);
-  color: #1a2e23;
+  background: var(--accent-pink-light);
+  color: var(--neutral-dark);
 }
 
 label {
   font-weight: 600;
-  color: #0d3c2c;
+  color: var(--neutral-dark);
 }
 
 input,
@@ -71,11 +118,11 @@ textarea,
 select {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgba(15, 79, 59, 0.25);
+  border: 1px solid rgba(68, 113, 90, 0.25);
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: inherit;
+  background-color: var(--neutral-white);
+  color: var(--neutral-dark);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -83,8 +130,30 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(15, 79, 59, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(68, 113, 90, 0.2);
+}
+
+/* Accessible error state for form validation */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--error);
+}
+
+input:invalid:focus:not(:placeholder-shown),
+textarea:invalid:focus:not(:placeholder-shown) {
+  box-shadow: 0 0 0 3px rgba(197, 48, 48, 0.2);
+}
+
+/* Success state for validated fields */
+input.valid,
+textarea.valid {
+  border-color: var(--success);
+}
+
+input.valid:focus,
+textarea.valid:focus {
+  box-shadow: 0 0 0 3px rgba(62, 139, 99, 0.2);
 }
 
 button,
@@ -117,4 +186,117 @@ section {
   width: min(100%, 72rem);
   margin-inline: auto;
   padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* 
+ * Button utility classes with accessible colors
+ * Primary: Forest green background with white text (WCAG AA compliant)
+ * Secondary: Sage green background with dark text (WCAG AA compliant)
+ * Accent: Pink shades with dark text (WCAG AA compliant)
+ */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--neutral-white);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background-color: var(--primary-light);
+  color: var(--neutral-dark);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.btn-secondary:hover {
+  background-color: #6b8d6a;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+.btn-accent {
+  background-color: var(--accent-pink);
+  color: var(--neutral-dark);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.btn-accent:hover {
+  background-color: #c66d87;
+}
+
+.btn-accent:focus-visible {
+  outline: 2px solid var(--accent-pink);
+  outline-offset: 2px;
+}
+
+/* Alert/status message styles with proper contrast */
+.alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.alert-success {
+  background-color: rgba(62, 139, 99, 0.1);
+  border-left: 4px solid var(--success);
+  color: var(--neutral-dark);
+}
+
+.alert-error {
+  background-color: rgba(197, 48, 48, 0.1);
+  border-left: 4px solid var(--error);
+  color: var(--neutral-dark);
+}
+
+/* Accessible tag/badge styles */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.tag-pink {
+  background-color: var(--accent-pink-pale);
+  color: var(--neutral-dark);
+}
+
+.tag-green {
+  background-color: rgba(121, 158, 120, 0.2);
+  color: var(--neutral-dark);
 }
