@@ -95,9 +95,9 @@ export default function ConsultationPage() {
             Choose the currency that matches your location. Membership bundles with additional
             follow-ups and herbal refills are available on request.
           </p>
-          <div className="mt-6 overflow-hidden rounded-2xl border border-emerald-100">
+          <div className="mt-6 overflow-hidden rounded-2xl border border-primary-light/30">
             <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-emerald-100 text-sm">
+              <table className="min-w-full divide-y divide-primary-light/30 text-sm">
               <thead className="bg-primary text-left text-xs font-semibold uppercase tracking-wide text-neutral-off-white">
                 <tr>
                   <th scope="col" className="px-4 py-3">
@@ -108,7 +108,7 @@ export default function ConsultationPage() {
                   </th>
                 </tr>
               </thead>
-                <tbody className="divide-y divide-emerald-100 bg-white/60">
+                <tbody className="divide-y divide-primary-light/30 bg-white/60">
                   {pricing.map((price) => (
                     <tr key={price.region}>
                       <td className="px-4 py-3 font-medium text-primary">{price.region}</td>
@@ -212,7 +212,7 @@ export default function ConsultationPage() {
               </button>
             </div>
           </form>
-          <p className="mt-6 text-xs text-emerald-200">
+          <p className="mt-6 text-xs text-neutral-off-white/80">
             Consultations are valid for 15 days and include one detailed follow-up. Memberships
             provide extended monitoring, seasonal detox plans, and discounted herbal refills.
           </p>

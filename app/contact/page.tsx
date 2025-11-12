@@ -138,7 +138,7 @@ export default function ContactPage() {
               Hyderabad, Telangana, India. Virtual consultations are available for clients in
               Canada, the United States, the United Kingdom, Australia, and beyond.
             </p>
-            <div className="mt-4 h-40 w-full rounded-xl bg-gradient-to-br from-emerald-700/50 to-emerald-500/40 p-4 text-xs text-neutral-off-white">
+            <div className="mt-4 h-40 w-full rounded-xl bg-gradient-to-br from-primary/50 to-primary-light/40 p-4 text-xs text-neutral-off-white">
               Interactive map integration coming soon.
             </div>
           </div>
