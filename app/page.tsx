@@ -77,13 +77,13 @@ export default function HomePage() {
     <div className="page-shell pb-16">
       <section className="grid gap-12 pt-16 lg:grid-cols-[minmax(0,1.05fr),minmax(0,0.95fr)] lg:items-center lg:gap-16">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-light">
             Your Online Health Consultant
           </p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-emerald-950 sm:text-5xl">
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-neutral-dark sm:text-5xl">
             Holistic Ayurvedic-Unani care that heals the root cause
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-slate-700">
+          <p className="mt-6 max-w-xl text-lg text-neutral-dark/80">
             Dr. Zahida Sadaf blends classical Unani wisdom with modern gut health
             research to reverse PCOS/PCOD, thyroid issues, diabetes, hormonal
             imbalances, and chronic skin problems. Healing is her service—not a
@@ -92,34 +92,34 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/consultation"
-              className="rounded-full bg-emerald-900 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-emerald-200/60 transition hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-primary-light/60 transition hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Book Consultation (Starting at $80)
             </Link>
             <Link
               href="/about"
-              className="rounded-full bg-white/80 px-6 py-3 text-sm font-semibold text-emerald-900 shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-primary shadow ring-1 ring-primary/20 transition hover:bg-accent-pink-pale focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               Meet Dr. Sadaf
             </Link>
           </div>
           <dl className="mt-10 grid gap-6 sm:grid-cols-3">
-            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100">
-              <dt className="text-sm font-medium text-emerald-700">Initial Consultation</dt>
-              <dd className="mt-2 text-2xl font-semibold text-emerald-950">45–60 minutes</dd>
+            <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-primary-light/30">
+              <dt className="text-sm font-medium text-primary-light">Initial Consultation</dt>
+              <dd className="mt-2 text-2xl font-semibold text-neutral-dark">45–60 minutes</dd>
             </div>
-            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100">
-              <dt className="text-sm font-medium text-emerald-700">Follow-up Care</dt>
-              <dd className="mt-2 text-2xl font-semibold text-emerald-950">Monthly plans</dd>
+            <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-primary-light/30">
+              <dt className="text-sm font-medium text-primary-light">Follow-up Care</dt>
+              <dd className="mt-2 text-2xl font-semibold text-neutral-dark">Monthly plans</dd>
             </div>
-            <div className="rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100">
-              <dt className="text-sm font-medium text-emerald-700">Global Support</dt>
-              <dd className="mt-2 text-2xl font-semibold text-emerald-950">Consults worldwide</dd>
+            <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-primary-light/30">
+              <dt className="text-sm font-medium text-primary-light">Global Support</dt>
+              <dd className="mt-2 text-2xl font-semibold text-neutral-dark">Consults worldwide</dd>
             </div>
           </dl>
         </div>
         <div className="relative flex justify-center lg:justify-end">
-          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-emerald-200 via-emerald-50 to-amber-100 blur-3xl" />
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-accent-pink-pale via-neutral-off-white to-primary-light/20 blur-3xl" />
           <Image
             src="/dr-zahida-sadaf-portrait.jpg"
             alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
@@ -133,11 +133,11 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="why-choose-us">
-        <div className="rounded-3xl bg-white/80 p-8 shadow-sm ring-1 ring-emerald-100 sm:p-10">
-          <h2 id="why-choose-us" className="text-3xl font-semibold text-emerald-950">
+        <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-primary-light/30 sm:p-10">
+          <h2 id="why-choose-us" className="text-3xl font-semibold text-neutral-dark">
             Why choose Dr. Sadaf?
           </h2>
-          <p className="mt-4 max-w-3xl text-slate-700">
+          <p className="mt-4 max-w-3xl text-neutral-dark/80">
             Discover holistic regimens that combine organic herbal medicines, diet therapy,
             cupping (Hijama), leech therapy, yoga, meditation, and therapeutic oil baths to
             restore harmony in the body’s systems.
@@ -147,9 +147,9 @@ export default function HomePage() {
             {principles.map((principle) => (
               <li
                 key={principle}
-                className="flex items-start gap-3 rounded-2xl bg-emerald-50/70 p-4 text-sm text-emerald-900"
+                className="flex items-start gap-3 rounded-2xl bg-accent-pink-pale/40 p-4 text-sm text-neutral-dark"
               >
-                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-emerald-500" aria-hidden="true" />
+                <span className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-accent-pink" aria-hidden="true" />
                 <span>{principle}</span>
               </li>
             ))}
@@ -160,10 +160,10 @@ export default function HomePage() {
       <section aria-labelledby="our-services">
         <div className="flex flex-col gap-8">
           <div className="max-w-3xl">
-            <h2 id="our-services" className="text-3xl font-semibold text-emerald-950">
+            <h2 id="our-services" className="text-3xl font-semibold text-neutral-dark">
               Our services for chronic wellness
             </h2>
-            <p className="mt-4 text-slate-700">
+            <p className="mt-4 text-neutral-dark/80">
               Personalized care plans include pure Unani formulations, diet therapy, lifestyle
               correction, personal assistance, medical report analysis, and regular follow-up.
             </p>
@@ -172,16 +172,16 @@ export default function HomePage() {
             {services.map((service) => (
               <article
                 key={service.title}
-                className="flex h-full flex-col justify-between rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100 transition hover:-translate-y-1 hover:shadow-lg"
+                className="flex h-full flex-col justify-between rounded-3xl bg-white p-6 shadow-sm ring-1 ring-primary-light/30 transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-emerald-900">{service.title}</h3>
-                  <p className="mt-3 text-sm text-slate-700">{service.description}</p>
+                  <h3 className="text-xl font-semibold text-primary">{service.title}</h3>
+                  <p className="mt-3 text-sm text-neutral-dark/80">{service.description}</p>
                 </div>
                 <div className="mt-6">
                   <Link
                     href="/consultation"
-                    className="text-sm font-semibold text-emerald-800 underline-offset-4 hover:underline"
+                    className="text-sm font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                     aria-label={`Book a consultation to learn more about ${service.title}`}
                   >
                     Book your personalized plan
@@ -194,12 +194,12 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="testimonials">
-        <div className="rounded-3xl bg-emerald-900 px-8 py-12 text-emerald-50 shadow-lg">
+        <div className="rounded-3xl bg-primary px-8 py-12 text-neutral-off-white shadow-lg">
           <div className="mx-auto max-w-3xl text-center">
             <h2 id="testimonials" className="text-3xl font-semibold text-white">
               Stories of renewed balance
             </h2>
-            <p className="mt-3 text-emerald-100">
+            <p className="mt-3 text-neutral-off-white/90">
               Real people. Real results. Personalized care that feels like family.
             </p>
           </div>
@@ -207,12 +207,12 @@ export default function HomePage() {
             {testimonials.map((testimonial) => (
               <figure
                 key={testimonial.author}
-                className="flex h-full flex-col justify-between rounded-3xl bg-emerald-800/60 p-6 text-left"
+                className="flex h-full flex-col justify-between rounded-3xl bg-primary-hover/80 p-6 text-left"
               >
-                <blockquote className="text-sm leading-6 text-emerald-50">
+                <blockquote className="text-sm leading-6 text-neutral-off-white">
                   “{testimonial.quote}”
                 </blockquote>
-                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-emerald-200">
+                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-accent-pink-light">
                   {testimonial.author}
                 </figcaption>
               </figure>

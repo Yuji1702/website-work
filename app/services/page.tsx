@@ -48,8 +48,8 @@ export default function ServicesPage() {
     <div className="page-shell pb-16">
       <section className="pt-16">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-bold tracking-tight text-emerald-950">Holistic services tailored to you</h1>
-          <p className="mt-6 text-lg text-slate-700">
+          <h1 className="text-4xl font-bold tracking-tight text-neutral-dark">Holistic services tailored to you</h1>
+          <p className="mt-6 text-lg text-neutral-dark/80">
             Each service combines pure Unani formulations, diet therapy, lifestyle correction,
             personal assistance, medical report analysis, and regular follow-up so you feel
             supported every step of the way.
@@ -60,16 +60,16 @@ export default function ServicesPage() {
           {serviceCards.map((card) => (
             <article
               key={card.title}
-              className="flex h-full flex-col justify-between rounded-3xl bg-white/90 p-6 shadow-sm ring-1 ring-emerald-100 transition hover:-translate-y-1 hover:shadow-lg"
+              className="flex h-full flex-col justify-between rounded-3xl bg-white p-6 shadow-sm ring-1 ring-primary-light/30 transition hover:-translate-y-1 hover:shadow-lg"
             >
               <div>
-                <h2 className="text-2xl font-semibold text-emerald-900">{card.title}</h2>
-                <p className="mt-3 text-sm text-slate-700">{card.description}</p>
+                <h2 className="text-2xl font-semibold text-primary">{card.title}</h2>
+                <p className="mt-3 text-sm text-neutral-dark/80">{card.description}</p>
               </div>
               <div className="mt-6">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center text-sm font-semibold text-emerald-800 underline-offset-4 hover:underline"
+                  className="inline-flex items-center text-sm font-semibold text-primary underline-offset-4 hover:underline"
                   aria-label={`Schedule a consultation about ${card.title}`}
                 >
                   Book consultation

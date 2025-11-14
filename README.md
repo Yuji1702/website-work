@@ -3,6 +3,26 @@
 ## Overview
 This repository powers the marketing site for **Dr. Zahida Sadaf**, an Ayurvedic–Unani physician who delivers holistic, root-cause healing plans. The site highlights her principles, global consultation process, regional pricing, and natural therapies such as Hijama, leech therapy, yoga, and personalized herbal formulations. It is built with the Next.js App Router so each route renders quickly, remains SEO friendly, and is ready for deployment on any Node.js host.
 
+## Design System
+
+The website features an **accessible, WCAG AA-compliant color palette** designed specifically for healthcare and women's wellness:
+
+### Color Palette
+- **Primary (Forest Green)**: `#44715A` - Trust, healing, nature
+- **Secondary (Sage Green)**: `#799E78` - Balance, calm, wellness
+- **Accent Pink Shades**: 
+  - Dusty Pink: `#D37995` - Nurturing, compassionate care
+  - Light Pink: `#E19DB2` - Warmth and comfort
+  - Pale Blush: `#FADCE4` - Gentle healing
+- **Neutrals**: 
+  - Dark Grey: `#0F172A` - Body text and headings
+  - Off-White: `#F7F5F5` - Warm page background
+- **Status Colors**:
+  - Success Green: `#3E8B63` - Positive feedback
+  - Error Red: `#C53030` - Validation and alerts
+
+All colors have been tested to ensure proper contrast ratios for accessibility. See [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for comprehensive design token documentation and usage guidelines.
+
 ## Tech stack
 - [Next.js 14](https://nextjs.org/docs) with the App Router and file-system based routing
 - [TypeScript](https://www.typescriptlang.org/) for static typing and editor tooling
@@ -41,3 +61,7 @@ Run commands from the project root:
 - The root layout adds [Schema.org Physician](https://schema.org/Physician) JSON-LD to improve search discoverability.
 - Forms use semantic `<label>` elements, required states, and autocomplete hints for better usability.
 - Responsive navigation supports keyboard focus, skip links, and a mobile toggle so the experience remains inclusive on all devices.
+- **WCAG AA Compliant**: All color combinations meet accessibility standards with proper contrast ratios (4.5:1 for normal text, 3:1 for large text and UI components).
+- **Focus Indicators**: All interactive elements have visible focus outlines for keyboard navigation.
+- **Form Validation**: Success and error states use both color and text/icons to ensure accessibility.
+- **Mobile-First**: Base font size is 16px minimum for readability on mobile devices.
