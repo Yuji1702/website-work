@@ -121,7 +121,7 @@ export default function HomePage() {
         <div className="relative flex justify-center lg:justify-end">
           <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-emerald-200 via-emerald-50 to-amber-100 blur-3xl" />
           <Image
-            src="/dr-zahida-sadaf-portrait.svg"
+            src="/dr-zahida-sadaf-portrait.jpg"
             alt="Illustration of Dr. Zahida Sadaf offering holistic Ayurvedic-Unani consultation"
             width={520}
             height={520}
