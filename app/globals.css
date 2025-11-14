@@ -1,16 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f7f4;
-  --foreground: #0f1f19;
-  --accent: #0f4f3b;
-  --accent-soft: #e0f2e9;
-  --highlight: #fcd34d;
+  /* Healthcare-focused accessible color palette */
+  --primary: #44715A;           /* Forest green - primary actions, passes WCAG AA with white text */
+  --primary-hover: #345840;     /* Darker forest green for hover states */
+  --secondary: #799E78;         /* Sage green - secondary actions, passes WCAG AA with dark text */
+  --secondary-hover: #5d7a5c;   /* Darker sage green for hover */
+  
+  /* Pink accent colors - all pass WCAG AA with dark text */
+  --accent-pink: #D37995;       /* Dusty pink */
+  --accent-pink-light: #E19DB2; /* Light pink */
+  --accent-pink-pale: #FADCE4;  /* Pale blush */
+  
+  /* Neutrals for text and backgrounds */
+  --text-dark: #0F172A;         /* Dark grey for body text */
+  --bg-warm: #F7F5F5;           /* Off-white for section backgrounds */
+  --bg-white: #FFFFFF;          /* Pure white */
+  
+  /* Status colors - accessible */
+  --error: #C53030;             /* Accessible red for errors */
+  --success: #3E8B63;           /* Success green */
+  
+  /* Legacy variables for gradual migration */
+  --background: #F7F5F5;
+  --foreground: #0F172A;
+  --accent: #44715A;
+  --accent-soft: #FADCE4;
+  --highlight: #E19DB2;
 }
 
 @theme inline {
+  /* Define Tailwind color utilities */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-pink-light: var(--accent-pink-light);
+  --color-accent-pink-pale: var(--accent-pink-pale);
+  --color-text-dark: var(--text-dark);
+  --color-bg-warm: var(--bg-warm);
+  --color-error: var(--error);
+  --color-success: var(--success);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
@@ -19,11 +53,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #06130f;
-    --foreground: #f3f6f2;
-    --accent: #34d399;
-    --accent-soft: #123027;
-    --highlight: #facc15;
+    /* Keep dark mode simple for now - healthcare site is primarily light */
+    --background: #0F172A;
+    --foreground: #F7F5F5;
+    --accent: #799E78;
+    --accent-soft: #44715A;
+    --highlight: #E19DB2;
   }
 }
 
@@ -34,19 +69,19 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-warm);
+  color: var(--text-dark);
   font-family: var(--font-sans);
   line-height: 1.6;
 }
 
 a {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #0d3c2c;
+  color: var(--primary-hover);
 }
 
 img,
@@ -57,13 +92,13 @@ video {
 }
 
 ::selection {
-  background: var(--highlight);
-  color: #1a2e23;
+  background: var(--accent-pink-light);
+  color: var(--text-dark);
 }
 
 label {
   font-weight: 600;
-  color: #0d3c2c;
+  color: var(--text-dark);
 }
 
 input,
@@ -71,11 +106,11 @@ textarea,
 select {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgba(15, 79, 59, 0.25);
+  border: 1px solid rgba(68, 113, 90, 0.25);
   padding: 0.75rem 1rem;
   font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: inherit;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -83,8 +118,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(15, 79, 59, 0.2);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(68, 113, 90, 0.2);
 }
 
 button,
@@ -117,4 +152,68 @@ section {
   width: min(100%, 72rem);
   margin-inline: auto;
   padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+/* Success and error message styles for form validation and alerts */
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-block: 1rem;
+}
+
+.alert-success {
+  background-color: rgba(62, 139, 99, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.alert-error {
+  background-color: rgba(197, 48, 48, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.alert-info {
+  background-color: rgba(68, 113, 90, 0.1);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Form validation styles */
+input.error,
+textarea.error,
+select.error {
+  border-color: var(--error);
+}
+
+input.error:focus,
+textarea.error:focus,
+select.error:focus {
+  box-shadow: 0 0 0 4px rgba(197, 48, 48, 0.2);
+}
+
+input.success,
+textarea.success,
+select.success {
+  border-color: var(--success);
+}
+
+input.success:focus,
+textarea.success:focus,
+select.success:focus {
+  box-shadow: 0 0 0 4px rgba(62, 139, 99, 0.2);
+}
+
+.field-error {
+  color: var(--error);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.field-success {
+  color: var(--success);
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
 }
