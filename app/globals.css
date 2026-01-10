@@ -75,8 +75,12 @@ video {
 }
 
 label {
+  display: block;
   font-weight: 600;
   color: #4A5F3E;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
 }
 
 input,
@@ -84,20 +88,35 @@ textarea,
 select {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgba(107, 143, 93, 0.25);
-  padding: 0.75rem 1rem;
+  border: 2px solid rgba(107, 143, 93, 0.3);
+  padding: 0.875rem 1.125rem;
   font-size: 1rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.5;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #2A3F1E;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(74, 95, 62, 0.5);
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: rgba(107, 143, 93, 0.5);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(107, 143, 93, 0.2);
+  border-color: #6B8F5D;
+  box-shadow: 0 0 0 3px rgba(107, 143, 93, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 button,

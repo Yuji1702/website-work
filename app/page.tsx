@@ -92,13 +92,13 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/consultation"
-              className="rounded-full bg-earth-800 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-earth-200/60 transition hover:bg-earth-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700"
+              className="rounded-full bg-earth-800 px-6 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-earth-200/60 transition hover:bg-earth-700 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700 active:scale-[0.98]"
             >
               Book Consultation (Starting at $80)
             </Link>
             <Link
               href="/about"
-              className="rounded-full bg-white/80 px-6 py-3 text-sm font-semibold text-earth-800 shadow transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700"
+              className="rounded-full bg-white/80 px-6 py-3 text-sm font-semibold text-earth-800 shadow ring-1 ring-earth-100 transition hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700 active:scale-[0.98]"
             >
               Meet Dr. Sadaf
             </Link>
