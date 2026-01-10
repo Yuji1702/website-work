@@ -44,11 +44,11 @@ export default function ContactPage() {
               </li>
             </ul>
             <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold">
-              <Link className="rounded-full bg-earth-800 px-4 py-2 text-white" href="/consultation">
+              <Link className="rounded-full bg-earth-800 px-4 py-2 text-white shadow transition hover:bg-earth-700 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700 active:scale-[0.98]" href="/consultation">
                 Book consultation
               </Link>
               <a
-                className="rounded-full bg-earth-400 px-4 py-2 text-earth-950"
+                className="rounded-full bg-earth-400 px-4 py-2 text-earth-950 shadow-sm ring-1 ring-earth-500/30 transition hover:bg-earth-300 hover:shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-600 active:scale-[0.98]"
                 href="https://wa.me/917667265892"
                 target="_blank"
                 rel="noreferrer"
@@ -126,7 +126,7 @@ export default function ContactPage() {
             <div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-earth-400 px-6 py-3 text-sm font-semibold text-earth-950 shadow transition hover:bg-earth-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="w-full rounded-full bg-earth-400 px-6 py-3 text-sm font-semibold text-earth-950 shadow-md ring-1 ring-earth-500/30 transition hover:bg-earth-300 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.99]"
               >
                 Submit message
               </button>

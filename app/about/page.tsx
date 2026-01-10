@@ -41,13 +41,13 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4">
             <Link
               href="/consultation"
-              className="rounded-full bg-earth-800 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-earth-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700"
+              className="rounded-full bg-earth-800 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-earth-700 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700 active:scale-[0.98]"
             >
               Book a Consultation
             </Link>
             <Link
               href="/services"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-earth-800 shadow-sm ring-1 ring-earth-100 transition hover:bg-earth-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-earth-800 shadow-sm ring-1 ring-earth-100 transition hover:bg-earth-50 hover:shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-700 active:scale-[0.98]"
             >
               Explore Services
             </Link>
