@@ -95,7 +95,7 @@ export function SiteHeader() {
               <li className="md:hidden">
                 <Link
                   href="/consultation"
-                  className="block rounded-full bg-earth-400 px-4 py-2 text-center text-sm font-semibold text-earth-950 shadow-sm ring-1 ring-earth-500/30 transition hover:bg-earth-300 hover:shadow active:scale-[0.98]"
+                  className="block rounded-full bg-earth-400 px-4 py-2 text-center text-sm font-semibold text-black shadow-sm ring-1 ring-earth-500/30 transition hover:bg-earth-500 hover:text-white hover:shadow active:scale-[0.98]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Book Consultation
@@ -107,7 +107,7 @@ export function SiteHeader() {
           <div className="hidden md:flex md:items-center">
             <Link
               href="/consultation"
-              className="rounded-full bg-earth-400 px-5 py-2 text-sm font-semibold text-earth-950 shadow-sm ring-1 ring-earth-500/30 transition hover:bg-earth-300 hover:shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-100 active:scale-[0.98]"
+              className="rounded-full bg-earth-400 px-5 py-2 text-sm font-semibold text-black shadow-sm ring-1 ring-earth-500/30 transition hover:bg-earth-500 hover:text-white hover:shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-earth-100 active:scale-[0.98]"
             >
               Book Consultation
             </Link>
