@@ -206,7 +206,7 @@ export default function ConsultationPage() {
             <div>
               <button
                 type="submit"
-                className="w-full rounded-full bg-earth-400 px-6 py-3 text-sm font-semibold text-white shadow-md ring-1 ring-earth-500/30 transition hover:bg-earth-500 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.99]"
+                className="w-full rounded-full bg-earth-500 px-6 py-3 text-sm font-semibold text-black shadow-md ring-1 ring-earth-600/30 transition hover:bg-earth-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.99]"
               >
                 Submit inquiry
               </button>
