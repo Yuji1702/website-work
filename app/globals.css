@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f7f4;
-  --foreground: #0f1f19;
-  --accent: #0f4f3b;
-  --accent-soft: #e0f2e9;
-  --highlight: #fcd34d;
+  --background: #F5F3E7;
+  --foreground: #4A5F3E;
+  --accent: #6B8F5D;
+  --accent-soft: #D9E7C5;
+  --highlight: #A9C88E;
 }
 
 @theme inline {
@@ -15,15 +15,28 @@
     "Segoe UI", sans-serif;
   --font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  
+  /* Earthy color palette */
+  --color-earth-50: #F5F3E7;
+  --color-earth-100: #D9E7C5;
+  --color-earth-200: #C5D9B0;
+  --color-earth-300: #B5CE9E;
+  --color-earth-400: #A9C88E;
+  --color-earth-500: #8FAF73;
+  --color-earth-600: #6B8F5D;
+  --color-earth-700: #5A7A4D;
+  --color-earth-800: #4A5F3E;
+  --color-earth-900: #3A4F2E;
+  --color-earth-950: #2A3F1E;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F6F0D7;
-    --foreground: #C5D89D;
-    --accent: #34d399;
-    --accent-soft: #9CAB84;
-    --highlight: #89986D;
+    --background: #4A5F3E;
+    --foreground: #F5F3E7;
+    --accent: #A9C88E;
+    --accent-soft: #6B8F5D;
+    --highlight: #D9E7C5;
   }
 }
 
@@ -46,7 +59,7 @@ a {
 }
 
 a:hover {
-  color: #0d3c2c;
+  color: #4A5F3E;
 }
 
 img,
@@ -58,12 +71,12 @@ video {
 
 ::selection {
   background: var(--highlight);
-  color: #1a2e23;
+  color: #4A5F3E;
 }
 
 label {
   font-weight: 600;
-  color: #0d3c2c;
+  color: #4A5F3E;
 }
 
 input,
@@ -71,7 +84,7 @@ textarea,
 select {
   width: 100%;
   border-radius: 0.75rem;
-  border: 1px solid rgba(15, 79, 59, 0.25);
+  border: 1px solid rgba(107, 143, 93, 0.25);
   padding: 0.75rem 1rem;
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.8);
@@ -84,7 +97,7 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(15, 79, 59, 0.2);
+  box-shadow: 0 0 0 4px rgba(107, 143, 93, 0.2);
 }
 
 button,
