@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -40,14 +41,23 @@ export function SiteHeader() {
       <div className="page-shell py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex w-full items-center justify-between gap-3 md:w-auto">
-            <div className="flex flex-col">
-              <Link href="/" className="text-lg font-semibold tracking-tight">
-                Dr. Zahida Sadaf
-              </Link>
-              <p className="text-sm text-earth-100">
-                Ayurvedic-Unani Physician &amp; Online Health Consultant
-              </p>
-            </div>
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="Dr. Zahida Sadaf Logo"
+                width={48}
+                height={48}
+                className="h-12 w-12"
+              />
+              <div className="flex flex-col">
+                <span className="text-lg font-semibold tracking-tight">
+                  Dr. Zahida Sadaf
+                </span>
+                <p className="text-sm text-earth-100">
+                  Ayurvedic-Unani Physician &amp; Online Health Consultant
+                </p>
+              </div>
+            </Link>
             <button
               type="button"
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-earth-500/60 text-earth-50 transition hover:bg-earth-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
@@ -80,11 +90,10 @@ export function SiteHeader() {
                     <Link
                       href={link.href}
                       aria-current={active ? "page" : undefined}
-                      className={`${linkBaseClasses} ${
-                        active
-                          ? "bg-earth-800 text-earth-100 md:bg-earth-800/70"
-                          : "hover:bg-earth-800/70"
-                      }`}
+                      className={`${linkBaseClasses} ${active
+                        ? "bg-earth-800 text-earth-100 md:bg-earth-800/70"
+                        : "hover:bg-earth-800/70"
+                        }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}
