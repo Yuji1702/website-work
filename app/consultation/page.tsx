@@ -88,8 +88,8 @@ export default function ConsultationPage() {
         </ol>
       </section>
 
-      <section className="mt-12 grid gap-10 lg:grid-cols-[minmax(0,1.1fr),minmax(0,0.9fr)] lg:items-start">
-        <div className="rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-earth-100 sm:p-10">
+      <section className="mt-12">
+        <div className="max-w-3xl rounded-3xl bg-white/90 p-8 shadow-sm ring-1 ring-earth-100 sm:p-10">
           <h2 className="text-3xl font-semibold text-earth-950">Consultation investment</h2>
           <p className="mt-4 text-earth-700">
             Choose the currency that matches your location. Membership bundles with additional
@@ -98,16 +98,16 @@ export default function ConsultationPage() {
           <div className="mt-6 overflow-hidden rounded-2xl border border-earth-100">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-earth-100 text-sm">
-              <thead className="bg-earth-800 text-left text-xs font-semibold uppercase tracking-wide text-earth-50">
-                <tr>
-                  <th scope="col" className="px-4 py-3">
-                    Region
-                  </th>
-                  <th scope="col" className="px-4 py-3">
-                    Consultation fee
-                  </th>
-                </tr>
-              </thead>
+                <thead className="bg-earth-800 text-left text-xs font-semibold uppercase tracking-wide text-earth-50">
+                  <tr>
+                    <th scope="col" className="px-4 py-3">
+                      Region
+                    </th>
+                    <th scope="col" className="px-4 py-3">
+                      Consultation fee
+                    </th>
+                  </tr>
+                </thead>
                 <tbody className="divide-y divide-earth-100 bg-white/60">
                   {pricing.map((price) => (
                     <tr key={price.region}>
@@ -132,90 +132,6 @@ export default function ConsultationPage() {
               </a>
             </p>
           </div>
-        </div>
-        <div className="rounded-3xl bg-earth-800/95 p-8 text-earth-50 shadow-lg sm:p-10">
-          <h2 className="text-3xl font-semibold text-white">Share your health story</h2>
-          <p className="mt-3 text-earth-100">
-            Complete the form and we will respond within one business day with next steps.
-          </p>
-          <form className="mt-6 space-y-5" action="#" method="post">
-            <div>
-              <label htmlFor="name">Full name</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                placeholder="Your name"
-                autoComplete="name"
-              />
-            </div>
-            <div>
-              <label htmlFor="email">Email address</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                placeholder="you@example.com"
-                autoComplete="email"
-              />
-            </div>
-            <div>
-              <label htmlFor="phone">Phone / WhatsApp</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                required
-                placeholder="Include country code"
-                autoComplete="tel"
-              />
-            </div>
-            <div>
-              <label htmlFor="location">Location &amp; time zone</label>
-              <input
-                id="location"
-                name="location"
-                type="text"
-                required
-                placeholder="City, Country (e.g., Hyderabad, India)"
-                autoComplete="address-level2"
-              />
-            </div>
-            <div>
-              <label htmlFor="health-concerns">Primary health concerns</label>
-              <textarea
-                id="health-concerns"
-                name="healthConcerns"
-                rows={4}
-                required
-                placeholder="Share symptoms, diagnoses, and current medications"
-              />
-            </div>
-            <div>
-              <label htmlFor="preferred-time">Preferred consultation time</label>
-              <input
-                id="preferred-time"
-                name="preferredTime"
-                type="text"
-                placeholder="Example: Weekday evenings IST"
-                autoComplete="off"
-              />
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full rounded-full bg-earth-500 px-6 py-3 text-sm font-semibold text-white shadow-md ring-1 ring-earth-600/30 transition hover:bg-earth-600 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[0.99]"
-              >
-                Submit inquiry
-              </button>
-            </div>
-          </form>
-          <p className="mt-6 text-xs text-earth-200">
-            Consultations are valid for 15 days and include one detailed follow-up. Memberships
-            provide extended monitoring, seasonal detox plans, and discounted herbal refills.
-          </p>
         </div>
       </section>
     </div>
