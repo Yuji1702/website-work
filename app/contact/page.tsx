@@ -61,13 +61,18 @@ export default function ContactPage() {
             <h2 className="text-xl font-semibold text-earth-900">Connect on social media</h2>
             <ul className="mt-4 space-y-2 text-sm text-earth-700">
               <li>
-                <a className="underline" href="https://www.instagram.com/drzahidasadaf" target="_blank" rel="noreferrer">
+                <a className="underline" href="https://www.instagram.com/drzahidasadaf/?utm_source=website" target="_blank" rel="noreferrer">
                   Instagram
                 </a>
               </li>
               <li>
-                <a className="underline" href="https://www.facebook.com/drzahidasadaf" target="_blank" rel="noreferrer">
+                <a className="underline" href="https://www.facebook.com/zahida.sadaf.31?utm_source=website" target="_blank" rel="noreferrer">
                   Facebook
+                </a>
+              </li>
+              <li>
+                <a className="underline" href="https://www.youtube.com/@dr.zahidasadaf4498?utm_source=website" target="_blank" rel="noreferrer">
+                  YouTube
                 </a>
               </li>
             </ul>

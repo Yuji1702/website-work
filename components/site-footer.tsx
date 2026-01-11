@@ -72,7 +72,7 @@ export function SiteFooter() {
             <li>
               <a
                 className="hover:text-white"
-                href="https://www.instagram.com/drzahidasadaf"
+                href="https://www.instagram.com/drzahidasadaf/?utm_source=website"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -82,11 +82,21 @@ export function SiteFooter() {
             <li>
               <a
                 className="hover:text-white"
-                href="https://www.facebook.com/drzahidasadaf"
+                href="https://www.facebook.com/zahida.sadaf.31?utm_source=website"
                 target="_blank"
                 rel="noreferrer"
               >
                 Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                className="hover:text-white"
+                href="https://www.youtube.com/@dr.zahidasadaf4498?utm_source=website"
+                target="_blank"
+                rel="noreferrer"
+              >
+                YouTube
               </a>
             </li>
           </ul>

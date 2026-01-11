@@ -46,12 +46,13 @@ const organizationSchema = {
   description:
     "Holistic Ayurvedic-Unani consultations for PCOS, hormonal imbalances, thyroid disorders, diabetes, and chronic skin concerns with safe herbal medicines.",
   url: "https://drzahidasadaf.com",
-  telephone: "+91-76672-65892",
+  telephone: "+91 76672 65892",
   priceRange: "₹700 - $100 USD",
   sameAs: [
     "https://wa.me/917667265892",
-    "https://www.instagram.com/drzahidasadaf",
-    "https://www.facebook.com/drzahidasadaf",
+    "https://www.instagram.com/drzahidasadaf/?utm_source=website",
+    "https://www.facebook.com/zahida.sadaf.31?utm_source=website",
+    "https://www.youtube.com/@dr.zahidasadaf4498?utm_source=website",
   ],
   address: {
     "@type": "PostalAddress",
