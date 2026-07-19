@@ -1,24 +1,15 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://www.drzahidasadaf.com";
-
   return {
     rules: [
       {
         userAgent: "*",
         allow: "/",
-        disallow: [
-          "/api/",
-          "/_next/",
-          "/admin/",
-          "/private/",
-          "/404",
-          "/500",
-        ],
+        disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: "https://www.drzahidasadaf.com/sitemap.xml",
+    host: "https://www.drzahidasadaf.com",
   };
 }
